@@ -1,0 +1,2 @@
+HumanMessage(content="Can I get the details of my order with id #1234"),
+AIMessage(content="Sure, your order with id #1234 is currently in transit and will reach your doorsteps in couple of days.")
