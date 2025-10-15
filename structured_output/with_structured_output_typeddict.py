@@ -13,6 +13,7 @@ load_dotenv()
 class Review(BaseModel):
     key_themes : Annotated[list[str], "Write the key themes discussed in the review in a list"]
     summary: Annotated[str, "Write a short summary about the product review"]
+    # In pydantic we use Field option to pass extra information to the model
     sentiment: str = Field(description="Write sentiment of the review in one word either positve, negative or neutral")
     pros: Annotated[Optional[list[str]], "Return the pros mentioned in the review in the form of list"]
     cons: Annotated[Optional[list[str]], "Return the cons mentioned in the review in the form of list"]

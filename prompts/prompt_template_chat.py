@@ -34,7 +34,7 @@ length_input = st.selectbox("Select explanation length", ["Short (1-2 Paragraph)
 #     validate_template=True
 # )
 
-template = load_prompt('template.json')
+template = load_prompt('./template.json')
 prompt = template.invoke({
     'paper_input': paper_input,
     'style_input': style_input,
