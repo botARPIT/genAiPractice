@@ -10,7 +10,8 @@ from langchain_core.output_parsers import StrOutputParser
 load_dotenv()
 
 llm = HuggingFaceEndpoint(
-    repo_id = "mistralai/Mistral-7B-Instruct-v0.2",
+    # repo_id = "mistralai/Mistral-7B-Instruct-v0.2",
+    repo_id="google/gemma-2-2b-it",
     task = "text-generation"
 )
 
@@ -22,13 +23,19 @@ template = PromptTemplate(
 )
 
 template1 = PromptTemplate(
-    template="Summarize the contents in 3-4 lines: {Content}",
+    template="Summarize the contents in 3-4 lines: {content}",
     input_variables=['content']
 )
 
-prompt = template.invoke({"topic": "What are agents in agentic ai"})
-response = model.invoke(prompt)
-prompt1 = template1.invoke({"content": response.content})
-response1 = model.invoke(prompt1)
+# prompt = template.invoke({"topic": "What are agents in agentic ai"})
+# response = model.invoke(prompt)
+# prompt1 = template1.invoke({"content": response.content})
+# response1 = model.invoke(prompt1)
+
+parser = StrOutputParser()
+chain = template | model | parser | template1 | model | parser
+# print(response)
+# print(response1)
+
+response = chain.invoke({'topic': "Alpha centauri"})
 print(response)
-print(response1)
