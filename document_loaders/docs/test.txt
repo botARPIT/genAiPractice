@@ -1,0 +1,4 @@
+This is a text file
+Just to check
+The working
+Of text loader

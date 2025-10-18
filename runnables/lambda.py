@@ -1,7 +1,7 @@
 # In this file, we are using the primitive Runnable Lambda to count the number of words in the response produced by the LLM
 # Runnable lambda basically used to add custom logic inside the chain
 
-from langchain.schema.runnable import RunnableLambda, RunnablePassthrough, RunnableParallel, RunnableSequence
+from langchain_core.runnables import RunnableLambda, RunnablePassthrough, RunnableParallel, RunnableSequence
 from langchain_core.output_parsers import StrOutputParser
 from langchain_huggingface import HuggingFaceEndpoint, ChatHuggingFace
 from dotenv import load_dotenv
