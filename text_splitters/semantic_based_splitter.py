@@ -25,7 +25,7 @@ Moments later, a cybersecurity analyst received an alert about an unusual login 
 The night settled again over the city, lights flickering like neurons in a vast digital brain. Somewhere between the noise and the silence, progress continued — steady, invisible, and deeply human.
 '''
 text_splitter = SemanticChunker(
-    embedding, 
+    embedding, # Embedding model 
     breakpoint_threshold_type='standard_deviation',
     breakpoint_threshold_amount=1
 )
