@@ -32,4 +32,4 @@ print(result)
 for relevant_doc in result:
     print(relevant_doc.page_content)
 
-
+# The benefit of using retriever instead of semantic search in vector stores is that sematic search works on only one principle / strategy while we can use retrievers can be used with different searching techniques and also they can be integrated in chains since they are runnables 

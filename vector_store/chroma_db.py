@@ -60,3 +60,9 @@ search_query = vector_store.similarity_search(
 )
 
 print("Search query", search_query)
+
+# Update document
+vector_store.update_document(document_id = "Document id", document = "updated doc")
+
+# Delete a doc
+vector_store.delete(ids=["ids of the docs you want to delete"])
