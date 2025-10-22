@@ -69,7 +69,7 @@ embedding_model = HuggingFaceEmbeddings( model_name = "sentence-transformers/all
 
 #Setting up llm
 llm = HuggingFaceEndpoint(
-     repo_id = "mistralai/Mistral-7B-Instruct-v0.2",
+    repo_id = "mistralai/Mistral-7B-Instruct-v0.2",
     # repo_id="google/gemma-2-2b-it",
     task = "text-generation"
 )
